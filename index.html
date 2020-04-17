@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sams_sandwhich.html</title>
+<link href="sams_sandwhich.style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<h1> Sam's sandwhich shop</h1>
+	<p></p>
+	<h2>Place your order here</h2>
+	<form name="order">
+		<h3> Sandwhich</h3>
+		<label><input type="radio" name="bread-length" value="6 Inch"> 6 Inch</label>
+		<label><input type="radio" name="bread-length" value="12 Inch"> 12 Inch</label>
+		
+		<h3> Bread</h3>
+		<label><input type="radio" name="bread_type" value="White"> White</label>
+		<label><input type="radio" name="bread_type" value="Wholegrain"> Wholegrain</label>
+		<label><input type="radio" name="bread_type" value="Italian"> Italian</label>
+		<label><input type="radio" name="bread_type" value="Rye"> Rye</label>
+		<label><input type="radio" name="bread_type" value="Wrap"> Wrap</label>
+	
+	
+		<h3>Cheese</h3>
+		<label><input type="radio" name="cheese" value="Swiss"> Swiss</label>
+		<label><input type="radio" name="cheese" value="Cheddar"> Cheddar</label>
+		<label><input type="radio" name="cheese" value="Feta"> Feta</label>
+		<label><input type="radio" name="cheese" value="No Cheese"> No Cheese</label>
+		
+		
+		<h3>Meat</h3>
+		<label><input type="radio" name="meat" value="Ham"> Ham</label>
+		<label><input type="radio" name="meat" value="Tuna"> Tuna</label>
+		<label><input type="radio" name="meat" value="Turkey">Turkey </label>
+		<label><input type="radio" name="meat" value="Salami"> Salami</label>
+		<label><input type="radio" name="meat" value="Meatball"> Meatball</label>
+		<label><input type="radio" name="meat" value="Chicken"> Chicken</label>
+		
+		
+		<h3>Salads</h3>
+		<label><input type="checkbox" value="Lettuce"> Lettuce</label>
+		<label><input type="checkbox" value="Tomatoes"> Tomatoes</label>
+		<label><input type="checkbox" value="Carrot"> Carrot</label>
+		<label><input type="checkbox" value="Cucumber"> Cucumber</label>
+		<label><input type="checkbox" value="Capsicum"> Capsicum</label>	
+		
+
+ <h2>Your details</h2>
+<label>Your name: </label><input type="text" id="name" placeholder="please type your name" pattern="[a-zA-Z]\w{1,39}"><br>
+<label>Your cellphone number: </label> <input id="cellphone" type="tel" placeholder="Please enter your phone number" pattern="02[0-9]\d{6,8}">
+	</form>	
+	<input type="button" value="submit" id="submit_button" onClick="loopForm(document.order)">
+<h3>Order Summary</h3>
+<div id="radioResults"></div>
+
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDRllcFvpn2Aaj60fBq5BCkFpvmudkcFsQ",
+    authDomain: "sam-s-sandwhich-shop.firebaseapp.com",
+    databaseURL: "https://sam-s-sandwhich-shop.firebaseio.com",
+    projectId: "sam-s-sandwhich-shop",
+    storageBucket: "sam-s-sandwhich-shop.appspot.com",
+    messagingSenderId: "788912931666",
+    appId: "1:788912931666:web:b3017e6b2960a88966308b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>	
+	
+	
+<script src="sams_sandwhich.v1.js"></script>
+</body>
+</html>
+
