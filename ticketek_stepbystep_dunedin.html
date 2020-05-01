@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ticketeck_dunedin_stepbystep.html</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="ticketek_stepbystep_dunedin.css" rel="stylesheet" type="text/css">
+</head>
+
+	
+<body>
+
+<form id="regForm" >
+  <h1>Ticketek Dunedin</h1>
+  <div class="tab">Please select the concert you wish to purchase tickets for 
+	<select id="concert_select">
+		<option selected="selected" disabled="disabled" value="select">Select a concert</option>
+		<option value="Teletubbies, 24th October 2020">Teletubbies, 24th October 2020</option>
+		<option value="The Wiggles, 9th December 2020">The Wiggles, 9th December 2020</option>
+		<option value="Minecraft sing-a-long, 1 january 2020">Minecraft sing-a-long, 1 january 2020</option>
+		<option value="Despacito 2, 2nd may 2020">Despacito 2, 2nd may 2020</option>
+	  
+	  </select>
+	
+	</div>
+	
+	<div class="tab">Select your seats
+	<label> Number of tickets:<input id="ticket_quanity" class="contact_info" data-number="5" data-error="sorry you can have a max number of 5 tickets" type="number" min="1" max="5" value="1"><output id="5A"></output></label><br>
+		<label>Type of seat you would like:</label><br>
+		<button class="seat_type" data-price="69" type="button" value="seated">Seated $69</button>
+		<button class="seat_type" data-price="23" type="button" value="Left Stand">Left Stand $23</button>
+		<button class="seat_type" data-price="56" type="button" value="Front Row">Front Row $56</button>
+		<button class="seat_type" data-price="140" type="button" value="UpFront">UpFront $140</button>
+		<button class="seat_type" data-price="230" type="button" value="Premier Seated">Premier Seated $230</button>
+	
+	</div>
+	
+	
+	<div class="tab">Ticket Summary
+        <label>Concert: <output id="concert"></output></label><br>
+        <label>Quantity: <output id="tickets"></output></label><br>
+        <label>Price per ticket: <output id="ticket_individual_price"></output></label><br><br>
+
+        <label>booking fee: $10</label><br>
+        <label>Total cost: <output id="total_cost"></output></label><br>
+    </div>
+	
+	
+	<div class="tab">Your details:
+	<label>First Name:<input id="first_name" placeholder="First name eg. John" type="text" data-error="Please enter only Letters" data-number="1" class="contact_info" pattern="[A-Za-z]{2,20}"><output id="1A"></output></label><br>
+		<label>Last Name:<input id="last_name" placeholder="Last name eg Doe" type="text" data-error="Please enter only Letters" data-number="2"class="contact_info" pattern="[A-Za-z]{2,20}"><output id="2A"></output></label><br>
+		<label> Email Address:<input id="email_address" placeholder="Email address eg johndoe@gmail.com" type="email" data-error="please enter a valid email" data-number="3" class="contact_info" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><output id="3A"></output></label><br>
+		<label>Cellphone:<input id="phone_number" placeholder="cell number eg 0239383838" type="tel" data-error="Please enter only numbers " data-number="4" class="contact_info" pattern="[0-9]{8,12}"><output id="4A"></output></label><br>
+		
+	</div>
+	
+  <!-- One "tab" for each step in the form: -->
+
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+</form>	
+	
+	
+	
+	
+<script src="ticketek_dunedin.js"></script>		
+</body>
+</html>
